@@ -1,0 +1,323 @@
+$date
+	Wed Mar 18 19:58:31 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module decode_tb $end
+$var wire 2 ! id_ex_wb [1:0] $end
+$var wire 32 " id_ex_sign_ext [31:0] $end
+$var wire 32 # id_ex_readdat2 [31:0] $end
+$var wire 32 $ id_ex_readdat1 [31:0] $end
+$var wire 32 % id_ex_npc [31:0] $end
+$var wire 3 & id_ex_mem [2:0] $end
+$var wire 5 ' id_ex_instr_bits_20_16 [4:0] $end
+$var wire 5 ( id_ex_instr_bits_15_11 [4:0] $end
+$var wire 4 ) id_ex_execute [3:0] $end
+$var reg 1 * clk $end
+$var reg 32 + if_id_instr [31:0] $end
+$var reg 32 , if_id_npc [31:0] $end
+$var reg 32 - mem_wb_write_data [31:0] $end
+$var reg 1 . rst $end
+$var reg 1 / wb_reg_write $end
+$var reg 5 0 wb_write_reg_location [4:0] $end
+$scope module DUT $end
+$var wire 1 * clk $end
+$var wire 32 1 if_id_instr [31:0] $end
+$var wire 32 2 if_id_npc [31:0] $end
+$var wire 32 3 mem_wb_write_data [31:0] $end
+$var wire 1 . rst $end
+$var wire 1 / wb_reg_write $end
+$var wire 5 4 wb_write_reg_location [4:0] $end
+$var wire 2 5 wb_internal [1:0] $end
+$var wire 32 6 sign_ext_internal [31:0] $end
+$var wire 32 7 readdat2_internal [31:0] $end
+$var wire 32 8 readdat1_internal [31:0] $end
+$var wire 3 9 mem_internal [2:0] $end
+$var wire 2 : id_ex_wb [1:0] $end
+$var wire 32 ; id_ex_sign_ext [31:0] $end
+$var wire 32 < id_ex_readdat2 [31:0] $end
+$var wire 32 = id_ex_readdat1 [31:0] $end
+$var wire 32 > id_ex_npc [31:0] $end
+$var wire 3 ? id_ex_mem [2:0] $end
+$var wire 5 @ id_ex_instr_bits_20_16 [4:0] $end
+$var wire 5 A id_ex_instr_bits_15_11 [4:0] $end
+$var wire 4 B id_ex_execute [3:0] $end
+$var wire 4 C ex_internal [3:0] $end
+$scope module c0 $end
+$var wire 1 * clk $end
+$var wire 6 D opcode [5:0] $end
+$var wire 1 . rst $end
+$var reg 4 E ex [3:0] $end
+$var reg 3 F mem [2:0] $end
+$var reg 2 G wb [1:0] $end
+$upscope $end
+$scope module iEL0 $end
+$var wire 1 * clk $end
+$var wire 4 H ctl_ex [3:0] $end
+$var wire 3 I ctl_mem [2:0] $end
+$var wire 2 J ctl_wb [1:0] $end
+$var wire 5 K instr_bits_15_11 [4:0] $end
+$var wire 5 L instr_bits_20_16 [4:0] $end
+$var wire 32 M npc [31:0] $end
+$var wire 1 . rst $end
+$var wire 32 N sign_ext [31:0] $end
+$var wire 32 O readdat2 [31:0] $end
+$var wire 32 P readdat1 [31:0] $end
+$var reg 4 Q ctl_out [3:0] $end
+$var reg 5 R instr_bits_15_11_out [4:0] $end
+$var reg 5 S instr_bits_20_16_out [4:0] $end
+$var reg 3 T mem_out [2:0] $end
+$var reg 32 U npc_out [31:0] $end
+$var reg 32 V readdat1_out [31:0] $end
+$var reg 32 W readdat2_out [31:0] $end
+$var reg 32 X sign_ext_out [31:0] $end
+$var reg 2 Y wb_out [1:0] $end
+$upscope $end
+$scope module rf0 $end
+$var wire 32 Z A_readdat1 [31:0] $end
+$var wire 32 [ B_readdat2 [31:0] $end
+$var wire 1 * clk $end
+$var wire 5 \ rd [4:0] $end
+$var wire 1 / regwrite $end
+$var wire 5 ] rs [4:0] $end
+$var wire 1 . rst $end
+$var wire 5 ^ rt [4:0] $end
+$var wire 32 _ writedata [31:0] $end
+$var integer 32 ` i [31:0] $end
+$upscope $end
+$scope module sE0 $end
+$var wire 16 a immediate [15:0] $end
+$var wire 32 b extended [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 b
+b0 a
+bx `
+b0 _
+b0 ^
+b0 ]
+b0 \
+bx [
+bx Z
+bx Y
+bx X
+bx W
+bx V
+bx U
+bx T
+bx S
+bx R
+bx Q
+bx P
+bx O
+b0 N
+b100 M
+b0 L
+b0 K
+b1 J
+b0 I
+b1001 H
+b1 G
+b0 F
+b1001 E
+b0 D
+b1001 C
+bx B
+bx A
+bx @
+bx ?
+bx >
+bx =
+bx <
+bx ;
+bx :
+b0 9
+bx 8
+bx 7
+b0 6
+b1 5
+b0 4
+b0 3
+b100 2
+b0 1
+b0 0
+0/
+1.
+b0 -
+b100 ,
+b0 +
+0*
+bx )
+bx (
+bx '
+bx &
+bx %
+bx $
+bx #
+bx "
+bx !
+$end
+#5000
+b0 (
+b0 A
+b0 R
+b0 '
+b0 @
+b0 S
+b0 "
+b0 ;
+b0 X
+b100 %
+b100 >
+b100 U
+b1001 )
+b1001 B
+b1001 Q
+b0 &
+b0 ?
+b0 T
+b1 !
+b1 :
+b1 Y
+1*
+#10000
+b0 #
+b0 <
+b0 W
+b0 $
+b0 =
+b0 V
+b0 %
+b0 >
+b0 U
+b0 )
+b0 B
+b0 Q
+b0 !
+b0 :
+b0 Y
+b0 7
+b0 O
+b0 [
+b0 8
+b0 P
+b0 Z
+b1100000100000 6
+b1100000100000 N
+b1100000100000 b
+b1100000100000 a
+b1 ]
+b10 ^
+b10 L
+b11 K
+b100000 `
+0*
+b1000100001100000100000 +
+b1000100001100000100000 1
+0.
+#15000
+b100000 `
+1*
+#20000
+0*
+b11011110101011011011111011101111 -
+b11011110101011011011111011101111 3
+b11011110101011011011111011101111 _
+b101 0
+b101 4
+b101 \
+1/
+#25000
+b100000 `
+1*
+#30000
+b100000 6
+b100000 N
+b100000 b
+b100000 a
+b101 ]
+b0 ^
+b0 L
+b0 K
+0*
+b101000000000000000100000 +
+b101000000000000000100000 1
+0/
+#35000
+b100000 `
+1*
+#40000
+b10 C
+b10 E
+b10 H
+b10 9
+b10 F
+b10 I
+b11 5
+b11 G
+b11 J
+b11111111111111111111111111111111 6
+b11111111111111111111111111111111 N
+b11111111111111111111111111111111 b
+b1111111111111111 a
+b1 ]
+b10 ^
+b100011 D
+b10 L
+b11111 K
+0*
+b10001100001000101111111111111111 +
+b10001100001000101111111111111111 1
+#45000
+b100000 `
+1*
+#50000
+b1 9
+b1 F
+b1 I
+b0 5
+b0 G
+b0 J
+b1000 6
+b1000 N
+b1000 b
+b1000 a
+b101011 D
+b0 K
+0*
+b10101100001000100000000000001000 +
+b10101100001000100000000000001000 1
+#55000
+b100000 `
+1*
+#60000
+b100 C
+b100 E
+b100 H
+b100 9
+b100 F
+b100 I
+b101 6
+b101 N
+b101 b
+b101 a
+b100 D
+0*
+b10000001000100000000000000101 +
+b10000001000100000000000000101 1
+#65000
+b100000 `
+1*
+#70000
+0*

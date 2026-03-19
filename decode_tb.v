@@ -1,4 +1,3 @@
-`include "../src/decode.v"
 `timescale 1ns/1ps
 
 module decode_tb;

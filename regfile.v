@@ -13,8 +13,8 @@ module regfile (
     integer i;
 
     // Synchronous write, async reset
-    always @(posedge clk or posedge rst) begin
-        if (rst) begin
+    always @(posedge clk or negedge rst) begin
+        if (!rst) begin
             for (i = 0; i < 32; i = i + 1)
                 registers[i] <= 32'b0;
         end else if (regwrite && rd != 5'b0) begin

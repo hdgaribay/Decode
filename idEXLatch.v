@@ -23,8 +23,8 @@ module idExLatch (
     output reg  [4:0]  instr_bits_20_16_out,
     output reg  [4:0]  instr_bits_15_11_out
 );
-    always @(posedge clk or posedge rst) begin
-        if (rst) begin
+    always @(posedge clk or negedge rst) begin
+        if (!rst) begin
             wb_out               <= 2'b0;
             mem_out              <= 3'b0;
             ctl_out              <= 4'b0;

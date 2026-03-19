@@ -1,8 +1,3 @@
-`include "../src/control.v"
-`include "../src/idExLatch.v"
-`include "../src/regfile.v"
-`include "../src/signExt.v"
-
 module decode (
     input  wire        clk,
     input  wire        rst,
@@ -29,7 +24,7 @@ module decode (
     wire [2:0]  mem_internal;
     wire [3:0]  ex_internal;
 
-    signExtend sE0 (
+    signExt sE0 (
         .immediate(if_id_instr[15:0]),
         .extended(sign_ext_internal)
     );
