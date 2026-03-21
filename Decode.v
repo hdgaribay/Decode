@@ -6,6 +6,7 @@ module decode (
     input  wire [31:0] mem_wb_write_data,
     input  wire [31:0] if_id_instr,
     input  wire [31:0] if_id_npc,
+    //outputs
     output wire [1:0]  id_ex_wb,
     output wire [2:0]  id_ex_mem,
     output wire [3:0]  id_ex_execute,
@@ -16,7 +17,7 @@ module decode (
     output wire [4:0]  id_ex_instr_bits_20_16,
     output wire [4:0]  id_ex_instr_bits_15_11
 );
-    // Internal wires (combinational outputs from submodules)
+   //internal wires
     wire [31:0] sign_ext_internal;
     wire [31:0] readdat1_internal;
     wire [31:0] readdat2_internal;

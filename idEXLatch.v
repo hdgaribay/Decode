@@ -1,18 +1,16 @@
 module idExLatch (
     input  wire        clk,
     input  wire        rst,
-    // Control signals in
     input  wire [1:0]  ctl_wb,
     input  wire [2:0]  ctl_mem,
     input  wire [3:0]  ctl_ex,
-    // Data in
     input  wire [31:0] npc,
     input  wire [31:0] readdat1,
     input  wire [31:0] readdat2,
     input  wire [31:0] sign_ext,
     input  wire [4:0]  instr_bits_20_16,
     input  wire [4:0]  instr_bits_15_11,
-    // Outputs (all reg — latched on clock edge)
+    //outputs
     output reg  [1:0]  wb_out,
     output reg  [2:0]  mem_out,
     output reg  [3:0]  ctl_out,
@@ -23,8 +21,8 @@ module idExLatch (
     output reg  [4:0]  instr_bits_20_16_out,
     output reg  [4:0]  instr_bits_15_11_out
 );
-    always @(posedge clk or negedge rst) begin
-        if (!rst) begin
+    always @(posedge clk) begin
+        if (rst) begin
             wb_out               <= 2'b0;
             mem_out              <= 3'b0;
             ctl_out              <= 4'b0;

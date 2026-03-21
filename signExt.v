@@ -2,5 +2,5 @@ module signExt(
 input wire [15:0] immediate,
 output wire [31:0] extended
 );
-assign extended = {{16{immediate[15]}}, immediate};
+assign extended = {{16{immediate[15]}},immediate};  //prepend Immediate with 16 bits of the MSB
 endmodule
