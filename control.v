@@ -36,7 +36,7 @@ RTYPE: begin
 end
 LW: begin
     wb<= 2'b11;
-    mem<= 3'b011;
+    mem<= 3'b010;
     ex<= 4'b0001;
 end
 
