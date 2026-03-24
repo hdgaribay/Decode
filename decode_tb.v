@@ -106,13 +106,13 @@ initial begin
         // Binary:    000000  | 00010     | 00010     | 00010     | 00000 | 100000
         // Decimal:   0       | 2 ($v0)   | 2 ($v0)   | 2 ($v0)   | 0     | 32 (ADD)
         // ------------------------------------------------------------------
-        if_id_instr_tb = 32'h00421020
+        if_id_instr_tb = 32'h00421020;
         
         if_id_npc_tb = 32'h000006;
         wb_reg_write_tb = 0;
         #2
         #2
         $display("Decode Complete");
-        $finish
+        $finish;
 end
         endmodule
