@@ -34,8 +34,8 @@ module decode_tb;
 initial begin
         rst_tb = 1; 
         wb_reg_write_tb = 0;
-        wb_write_reg_location_tb = 5'd2; 
-        mem_wb_write_data_tb = 32'h64;
+        wb_write_reg_location_tb = 5'd2; //writing in register 2 when regwrite is on
+        mem_wb_write_data_tb = 32'h64; // data being writen into reg 2. I type instruction, so 
         if_id_npc_tb = 32'h0000001;
 // ------------------------------------------------------------------
         // Instruction 1: ADD $v0, $a1, $a0
@@ -94,7 +94,7 @@ initial begin
         #2
 
         if_id_npc_tb = 32'h0000005;
-        wb_reg_write_tb = 1;
+        wb_reg_write_tb = 1; // yes: write into regfile
         #2
         
         // ------------------------------------------------------------------
